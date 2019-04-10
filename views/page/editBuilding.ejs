@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/images/favicon.ico" sizes="16x16">
+    <link rel="stylesheet" href="/uikit/css/uikit.min.css" />
+    <link rel="stylesheet" type="text/css" href="/css/sidebar.css">
+    <link rel="stylesheet" type="text/css" href="/css/nav.css">
+    <link rel="stylesheet" type="text/css" href="/css/content.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+
+
+    <title>E-Exams: แก้ไขข้อมูลตึก</title>
+</head>
+
+<body>
+     <!------------------------------- Sidebar ------------------------------->
+     <div class="sidebar">
+            <center>
+                <div style="font-size: 45px; font-weight: 500;color: #f7a317;padding-top: 30px;"><span
+                        style="font-weight: 500;color: #6bb5ff">E-</span>EXAMS</div>
+                <p style="margin-top: -5px;color: white;">ระบบจัดการการสอบ</p>
+            </center>
+            <div class="uk-card  uk-card-body ">
+                <ul class="uk-nav-default uk-nav-parent-icon" uk-nav>
+                    <li><a href="/home"><span class="uk-margin-small-right" uk-icon="icon: table"></span>หน้าหลัก</a></li>
+                    <li class="uk-nav-divider"></li>
+                    <li class="uk-nav-header">บุคลากร/นิสิต</li>
+                    <li><a href="/student"><span class="uk-margin-small-right" uk-icon="icon: users"></span>จัดการนิสิต</a>
+                    </li>
+                    <li><a href="/teacher"><span class="uk-margin-small-right"
+                                uk-icon="icon: users"></span>จัดการอาจารย์</a>
+                    </li>
+                    <li><a href="/staff"><span class="uk-margin-small-right"
+                                uk-icon="icon: users"></span>จัดการเจ้าหน้าที่</a></li>
+                    <li class="uk-nav-divider"></li>
+                    <li class="uk-nav-header">สถาน</li>
+                    <li><a href="/room"><span class="uk-margin-small-right" uk-icon="icon: location"></span>จัดการห้อง</a>
+                    </li>
+                    <li class="uk-nav-divider"></li>
+                    <li class="uk-nav-header">การสอบ</li>
+                    <li><a href="/exam"><span class="uk-margin-small-right" uk-icon="icon: list"></span>จัดการการสอบ</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!------------------------------- Sidebar ------------------------------->
+    
+        
+
+    <!------------------------------- Top Bar ------------------------------->
+    <div class="nav">
+
+        <nav class="uk-navbar-container" uk-navbar>
+
+            <div class="uk-navbar-right">
+
+                <ul class="uk-navbar-nav" style="margin-right:20px;">
+                    <li>
+                        <a href="#" style="color:#FFF;"> <span uk-icon="user" style="margin-right:10px;"></span>
+                            Username</a>
+                        <div class="uk-navbar-dropdown" style="margin-top:50px;">
+                            <ul class="uk-nav uk-navbar-dropdown-nav">
+                                <a href="/">
+                                    <li class="uk-active"><a href="#">Logout</a></li>
+                                </a>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <!------------------------------- Top Bar ------------------------------->
+
+    <div class="content">
+        <h3 class="uk-heading-line uk-text-center"><span>แก้ไขข้อมูลตึก</span></h3>
+
+        <div style="display: flex; justify-content: center">
+            <div style="min-width: 500px;">
+                <form class="uk-form-stacked" method="post" action="/building/edit/submit/<%= result._id %>" >
+
+                    <div class="uk-margin">
+                        <label class="uk-form-label" for="form-stacked-text">อาคาร</label>
+                        <div class="uk-form-controls">
+                            <input class="uk-input" id="form-stacked-text" type="text" 
+                                name="namebuilding" required readonly value="<%= result.namebuilding %>" style="background-color:#F8F8F8">
+                        </div>
+                    </div>
+                    <div class="uk-margin">
+                        <label class="uk-form-label" for="form-stacked-text">ชื่ออาคาร</label>
+                        <div class="uk-form-controls">
+                            <input class="uk-input" id="form-stacked-text" type="text" 
+                                name="fullnamebuilding" required value="<%= result.fullnamebuilding %>">
+                        </div>
+                    </div>
+
+
+                    <button class="uk-button uk-button-primary " style="width:100%;" type="submit">submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+<script src="/uikit/js/uikit.min.js"></script>
+<script src="/uikit/js/uikit-icons.min.js"></script>

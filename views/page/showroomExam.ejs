@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/images/favicon.ico" sizes="16x16">
+    <link rel="stylesheet" href="/uikit/css/uikit.min.css" />
+    <link rel="stylesheet" type="text/css" href="/css/sidebar.css">
+    <link rel="stylesheet" type="text/css" href="/css/nav.css">
+    <link rel="stylesheet" type="text/css" href="/css/content.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <title>E-Exams: เพิ่มการสอบ</title>
+    <Style>
+        .jojo {
+            font-size: 14px;
+        }
+    </Style>
+</head>
+
+<body>
+    <%- include('../layouts/sidebar') %>;
+    <%- include('../layouts/topbar') %>;
+
+
+    <div class="content">
+        <div class="uk-text-left">
+            <span class="jojo"><b>88624359 Web Programing</b></span><br>
+            <span class="jojo">การสอน Lab Stack</span><br>
+            <span class="jojo">วันที่สอบ 16/04/2562</span><br>
+            <span class="jojo">เวลาสอบ 13.00 - 15.00 น.</span><br>
+            <span class="jojo">กลุ่มเรียนที่ 1</span><br>
+            <span class="jojo">จำนวนนิสิต 50 คน</span><br>
+        </div>
+        <br>
+        <div class="uk-text-center" uk-grid>
+                <h4><span>ห้องสอบ</span></h4>
+        </div>
+        <table class="uk-table uk-table-divider uk-table-striped">
+            <thead>
+                <tr>
+                    <th class="uk-text-center">ห้องสอบ</th>
+
+                    <th class="uk-text-center">ผู้คุมสอบ</th>
+                    <th class="uk-text-center">ตัวเลือก</th>
+                </tr>
+            </thead>
+            <tbody class="uk-text-center">
+                <tr>
+                    <td class="uk-text-center">IF-5T01</td>
+
+                    <td class="uk-text-center">นาย ภูวิศ ทีเวียง</td>
+                    <td class="uk-text-center">
+                            <a class="uk-icon-link uk-icon-button uk-button-primary" uk-icon="search"></a>
+                            <a class="uk-icon-link uk-icon-button  btn-primary" uk-icon="pencil"></a>
+                            <a class="uk-icon-link uk-icon-button  btn-warning" uk-icon="file-edit"></a>
+                            <a class="uk-icon-link uk-icon-button  btn-danger" uk-icon="trash"></a></td>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
+
+<script src="/uikit/js/uikit.min.js"></script>
+<script src="/uikit/js/uikit-icons.min.js"></script>

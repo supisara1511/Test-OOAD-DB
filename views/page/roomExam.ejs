@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/images/favicon.ico" sizes="16x16">
+    <link rel="stylesheet" href="/uikit/css/uikit.min.css" />
+    <link rel="stylesheet" type="text/css" href="/css/sidebar.css">
+    <link rel="stylesheet" type="text/css" href="/css/nav.css">
+    <link rel="stylesheet" type="text/css" href="/css/content.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <title>E-Exams: เพิ่มการสอบ</title>
+</head>
+
+<body>
+    <%- include('../layouts/sidebar') %>;
+    <%- include('../layouts/topbar') %>;
+
+
+    <div class="content">
+        <h3 class="uk-heading-line uk-text-center"><span>เพิ่มการสอบ</span></h3>
+        <div class="uk-text-center" uk-grid>
+            <h5><span>เพิ่มห้องสอบ</span></h5>
+            <div class="uk-width-4-4">
+                <input class="uk-input" type="text" name="room" placeholder="ค้นหาตึก/ห้อง">
+            </div>
+        </div>
+        <div class="uk-text-center" uk-grid>
+            <div class="uk-width-3-4">
+                <input class="uk-input" type="number" name="numsitdown" placeholder="จำนวนที่นั่ง">
+            </div>
+            <div class="uk-width-1-4">
+                <a class="uk-button uk-button-primary" style="width: 100%;"><i class="uk-icon-link"
+                        uk-icon="plus-circle" style="color:#FFF;"></i>ค้นหา</a>
+            </div>
+        </div>
+
+        <!-- เพิ่มข้อมูลห้องสอบ -->
+        <div class="uk-text-center" uk-grid>
+            <h5><span>ห้องสอบ</span></h5>
+        </div>
+        <table class="uk-table uk-table-divider">
+            <thead>
+                <tr>
+                    <th class="uk-width-small uk-text-center">เลือก</th>
+                    <th class="uk-text-center">ห้อง</th>
+                    <th class="uk-text-center">จำนวนที่นั่ง</th>
+                </tr>
+            </thead>
+            <tbody class="uk-text-center">
+                <tr>
+                    <td> <input type="checkbox" name="checkroom"></td>
+                    <td>IF-5T01</td>
+                    <td>0/50</td>
+                </tr>
+            </tbody>
+            <tbody class="uk-text-center">
+                <tr>
+                    <td> <input type="checkbox" name="checkroom"></td>
+                    <td>IF-5T03</td>
+                    <td>23/50</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- เพิ่มข้อมูลผู้คุมสอบ -->
+
+        <div class="uk-text-center" uk-grid>
+            <h5><span>ผู้คุมสอบ</span></h5>
+        </div>
+        <div class="uk-text-center" uk-grid>
+            <div class="uk-width-3-4">
+                <div class="uk-search uk-search-default" style="width: 100%;">
+                    <input class="uk-search-input" type="text" id="myInput" placeholder="ค้นหา ชื่อ-นามสกุล">
+                </div>
+            </div>
+            <div class="uk-width-1-4">
+                <a class="uk-button uk-button-primary" style="width: 100%;"><i class="uk-icon-link"
+                        uk-icon="plus-circle" style="color:#FFF;"></i>ค้นหา</a>
+            </div>
+        </div>
+        <table class="uk-table uk-table-divider">
+            <thead>
+                <tr>
+                    <th class="uk-width-small uk-text-center">เลือก</th>
+                    <th class="uk-text-center">ชื่อ</th>
+
+                </tr>
+            </thead>
+            <tbody class="uk-text-center">
+                <tr>
+                    <td> <input type="checkbox" name="checkteach"></td>
+                    <td>ภูวิศ ทีเวียง</td>
+
+                </tr>
+            </tbody>
+            <tbody class="uk-text-center">
+                <tr>
+                    <td> <input type="checkbox" name="checkteach"></td>
+                    <td>แม่ประณี ขายหอม</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="uk-text-center">
+            <a href="/exam/showroomExam" class="uk-button uk-button-primary">Save</a>
+            <a class="uk-button uk-button-default uk-modal-close" type="button">Cancel</a>
+        </p>
+    </div>
+</body>
+
+</html>
+
+
+<script src="/uikit/js/uikit.min.js"></script>
+<script src="/uikit/js/uikit-icons.min.js"></script>

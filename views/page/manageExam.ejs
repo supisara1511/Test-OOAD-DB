@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/images/favicon.ico" sizes="16x16">
+    <link rel="stylesheet" href="/uikit/css/uikit.min.css" />
+    <link rel="stylesheet" type="text/css" href="/css/sidebar.css">
+    <link rel="stylesheet" type="text/css" href="/css/nav.css">
+    <link rel="stylesheet" type="text/css" href="/css/content.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <title>E-Exams: จัดการการสอบ</title>
+    <style>
+        .color-black {
+            color: #333;
+        }
+
+        p {
+            font-size: 0.9rem;
+            margin: 0px;
+            margin-top: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <%- include('../layouts/sidebar') %>;
+    <%- include('../layouts/topbar') %>;
+
+    <div class="content">
+        <h3 class="uk-heading-line uk-text-center"><span>จัดการการสอบ 88624359 Web Programming กลุ่ม 1</span></h3>
+        <p class="color-black">88624359 Web Programming กลุ่ม 1</p>
+        <p>การเรียนเขียนโปรแกรมบนเว็บ </p>
+        <p>หน่วยกิต: 3(2-2-5) <span></span></p>
+        <p>สถานะรายวิชา: <span>ใช้งาน</span></p>
+        <p>ปีการศึกษา: <span>2/2562</span></p>
+        <p>กลุ่มเรียน: <span>1</span></p>
+        <p>จำนวนนิสิต: <span>100</span> คน</p>
+
+        <hr>
+
+        <div uk-grid>
+            <div class="uk-width-3-4">
+                <h4>การสอบ</h4>
+            </div>
+            <div class="uk-width-1-4">
+                <a href="/exam/addExam" class="uk-button uk-button-primary" style="width: 100%;" uk-toggle="target: #my-id"><i
+                        class="uk-icon-link" uk-icon="plus-circle" style="color:white"></i> เพิ่มการสอบ</a>
+            </div>
+        </div>
+
+        <table class="uk-table uk-table-divider">
+            <thead>
+                <tr>
+                    <th class="uk-width-small uk-text-center">รายวิชา</th>
+                    <th class="uk-text-center">รายละเอียด</th>
+                    <th class="uk-text-center">วันที่สอบ</th>
+                    <th class="uk-width-small uk-text-center">เวลาสอบ</th>
+                    <th class="uk-width-small uk-text-center">ตัวเลือก</th>
+                </tr>
+            </thead>
+            <tbody class="uk-text-center">
+
+                <tr>
+                    <td>1</td>
+                    <td>detail</td>
+                    <td>12/02/2558</td>
+                    <td class="uk-text-center">12:58</td>
+                    <td class="uk-text-center"><a href="#" class="uk-icon-link uk-margin-small-right"
+                            uk-icon="copy"></a>
+                        <a href="#" class="uk-icon-link uk-margin-small-right" uk-icon="file-edit"></a>
+                        <a href="#" class="uk-icon-link" uk-icon="trash"></a></td>
+                </tr>
+
+            </tbody>
+            </tabl </div> </body> </html> <script src="/uikit/js/uikit.min.js">
+            </script>
+            <script src="/uikit/js/uikit-icons.min.js"></script>
